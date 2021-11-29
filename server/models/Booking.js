@@ -1,5 +1,4 @@
-const { integer } = require('check-types');
-const { schema } = require('mongoose');
+const { Schema } = require('mongoose');
 
 const bookingSchema = new Schema({
     title: {

@@ -11,9 +11,16 @@ type Booking {
     _id: ID!
     bookingId: String
     description: String
-    title:
+    title: String
 
 }
+
+input savedTournaments {
+    description: String
+    bookingId: String
+    title: String
+  }
+
 
 type Auth {
     token: ID!
