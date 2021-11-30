@@ -1,23 +1,24 @@
-const { Schema } = require('mongoose');
+// const { Schema } = require('mongoose');
 
-const bookingSchema = new Schema({
-    title: {
-        type: String,
-        required: true,
-    },
-    description: {
-        type: String,
-        required: true,
-    },
-    bookingId: {
-        type: String,
-        required: true,
+// const bookingSchema = new Schema({
+//     title: {
+//         type: String,
+//         required: true,
+//     },
+//     description: {
+//         type: String,
+//         required: true,
+//     },
+//     bookingId: {
+//         type: String,
+//         required: true,
 
-    },
-    date: {
-        type: String,
-        required: true,
-    },
-});
+//     },
+//     date: {
+//         type: String,
+//         required: true,
+//     },
+// });
 
-module.exports = bookingSchema;
+
+// module.exports = bookingSchema;
