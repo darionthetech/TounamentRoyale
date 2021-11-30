@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import NavTabs from './NavTabs';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Booking from './pages/Booking';
-import Contact from './pages/Contact';
+import Home from '../pages/Home';
+import Login from '../pages/Login';
+import Booking from '../pages/Booking';
+import Contact from '../pages/Contact';
 
 
 

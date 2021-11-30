@@ -1,9 +1,15 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-const bookingSchema = require('./Booking');
+// const bookingSchema = require('./Booking');
+// const { Booking } = require('.');
 
 const userSchema = new Schema(
     {
+        username: {
+            type: String,
+            required: true,
+            unique: true,
+          },
         email: {
             type: String,
             required: true,
@@ -14,7 +20,12 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
-        savedTournaments: [bookingSchema],
+        tracker: [
+           {
+            type: String,
+            trim: true,
+           },
+        ],
 
     },
     {
@@ -38,4 +49,6 @@ userSchema.pre('save', async function (next) {
   };
 
   const User = model('User', userSchema);
+
+
   module.exports = User;
