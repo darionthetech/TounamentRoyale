@@ -1,2 +1,2 @@
-# TounamentRoyale
+# TournamentRoyale
 Gaming tournament app
