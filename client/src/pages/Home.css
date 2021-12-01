@@ -1,6 +1,5 @@
-.rectangle {
-    display: inline-block;
-    width: 65%;
-    height: 800%;
-    background: black;
-  }
+.flex-row {
+  justify-content: center;
+  
+  align-items: center;
+}

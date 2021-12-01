@@ -1,62 +1,54 @@
 import React from 'react';
-import './styles/NavTabs.css';
+import { Link } from 'react-router-dom';
 
+import Auth from '../utils/auth';
 
-const styles = {
-  navbarStyle: {
-    background: 'green',
-    justifyContent: 'flex-end',
-    display: 'flex',
-  },
-};
-
-
-
-function NavTabs({ currentPage, handlePageChange }) {
+const NavTabs = () => {
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
   return (
-    <div>
-       <p>Tournament Royale</p>
-    <ul style={styles.navbarStyle} className="nav nav-tabs">
-
-      <li className="nav-item">
-        <a
-          href="#home"
-          onClick={() => handlePageChange('Home')}
-          className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
-        >
-          Home
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#booking"
-          onClick={() => handlePageChange('Booking')}
-          className={currentPage === 'Booking' ? 'nav-link active' : 'nav-link'}
-        >
-          Booking
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#login"
-          onClick={() => handlePageChange('Login')}
-          className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}
-        >
-         Login
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#contact"
-          onClick={() => handlePageChange('Contact')}
-          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
-        >
-          Contact
-        </a>
-      </li>
-    </ul>
-    </div>
+    <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
+      <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
+        <Link className="text-dark" to="/">
+          <h1 className="m-0" style={{ fontSize: '3rem' }}>
+          Tournament Blog
+          </h1>
+        </Link>
+        <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
+        Type out your experiences
+        </p>
+        <div>
+          {Auth.loggedIn() ? (
+            <>
+              <Link className="btn btn-lg btn-primary m-2" to="/me">
+                View My Profile
+              </Link>
+              <Link className= "btn btn-lg btn-primary m-2" to="/contact">
+                Contact
+              </Link>
+              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link className="btn btn-lg btn-primary m-2" to="/login">
+                Login
+              </Link>
+              <Link className="btn btn-lg btn-light m-2" to="/signup">
+                Signup
+              </Link>
+              <Link className="btn btn-lg btn-light m-2" to="/contact">
+                Contact
+              </Link>
+            </>
+          )}
+        </div>
+      </div>
+    </header>
   );
-}
+};
 
 export default NavTabs;

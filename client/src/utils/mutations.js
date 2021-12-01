@@ -1,64 +1,5 @@
 import { gql } from '@apollo/client';
 
-// export const LOGIN_USER = gql`
-// mutation login($email: String!, $password: String!) {
-//     login(email: $email, password: $password) {
-//       token
-//       user {
-//         _id
-//        email
-//       }
-//     }
-//   }
-
-// `;
-
-// export const ADD_USER = gql`
-// mutation addUser($username: String!, $email: String!, $password: String!) {
-//     addUser(username: $username, email: $email, password: $password) {
-//       token
-//       user {
-//         _id
-//         username
-//       }
-//     }
-//   }
-
-
-// `;
-
-// export const SAVE_BOOKING = gql`
-//   mutation saveBooking($input:  savedTournaments!) {
-//     saveBooking(input: $input) {
-//       _id
-//       username
-//       email
-//       savedTournaments {
-//         bookingId
-//         description
-//         title
-//       }
-//     }
-//   }
-// `;
-
-
-// export const REMOVE_BOOK = gql`
-//     mutation removeBooking($bookingId: ID!) {
-//         removeBooking(bookingId:$bookId) {
-//             _id
-//             email
-//             savedTournaments {
-//                 bookingId
-//                 description
-//                 title
-                
-//             }
-//         }
-// }
-// `;
-
-
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
     addUser(username: $username, email: $email, password: $password) {
@@ -70,12 +11,13 @@ export const ADD_USER = gql`
     }
   }
 `;
-export const ADD_TRACKER = gql`
-  mutation addTracker($userId: ID!, $tracker: String!) {
-    addSkill(userId: $userId, tracker: $tracker) {
+
+export const ADD_BLOG = gql`
+  mutation addBlog($userId: ID!, $blog: String!) {
+    addBlog(userId: $userId, blog: $blog) {
       _id
       username
-      tracker
+      blogs
     }
   }
 `;
@@ -88,6 +30,16 @@ export const LOGIN_USER = gql`
         _id
         username
       }
+    }
+  }
+`;
+
+export const REMOVE_BLOG = gql`
+  mutation removeBlog($blog: String!) {
+    removeSkill(blog: $blog) {
+      _id
+      username
+      blogs
     }
   }
 `;
