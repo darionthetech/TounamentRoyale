@@ -1,0 +1,21 @@
+[
+    {
+      "username": "Collisionz",
+      "email": "collisionz@gmail.com",
+      "password": "slide123",
+      "blogs": ["MLG Atlanta was extremely lit"]
+    },
+    {
+      "username": "Seth Abner",
+      "email": "Scumpii@gmail.com",
+      "password": "passwordCOD",
+      "blogs": ["I miss MLG events :("]
+    },
+    {
+      "username": "John",
+      "email": "John@gmail.com",
+      "password": "password123",
+      "blogs": ["That UMG Event in Dallas was awesome so many great people and staff"]
+    }
+]
+  

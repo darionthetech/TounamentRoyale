@@ -20,7 +20,7 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
-        tracker: [
+        blogs: [
            {
             type: String,
             trim: true,
