@@ -19,7 +19,6 @@ const Home = () => {
           ) : (
             <Bloggers
               users={users}
-              title=""
             />
           )}
         </div>
