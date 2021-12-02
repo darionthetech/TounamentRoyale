@@ -4,7 +4,7 @@ import background from "./github.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-
+//import from react hw assignment 
 export default function Contact() {
   return (
 <div class="team-grid">
