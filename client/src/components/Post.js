@@ -29,7 +29,7 @@ const Post = ({ userId }) => {
   return (
     <div>
       <h4>Post Something:)</h4>
-
+{/* logged in form */}
       {Auth.loggedIn() ? (
         <form
           className="flex-row justify-center justify-space-between-md align-center"
